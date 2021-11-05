@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6789161571357146718}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1321194046718202984}
   - component: {fileID: 2054085487692579737}
   - component: {fileID: 346060640624229428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TopCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2569424252568362890}
   - component: {fileID: 2569424252568362893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2a4b9d3d3820db44a8f83474b40e3a3d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2569424252780503091}
   - component: {fileID: 2569424252780503090}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2a4b9d3d3820db44a8f83474b40e3a3d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 2569424254284130845}
   - component: {fileID: 5017588677407091605}
   - component: {fileID: 2569424254284130847}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,6 +361,7 @@ MonoBehaviour:
   jumpForce: 6
   speed: 1
   gravity: -9.81
+  radius: 0.3
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -381,6 +382,8 @@ MonoBehaviour:
   arm: {fileID: 4291166632557356469}
   barrel: {fileID: 6789161571357146718}
   projectile: {fileID: 1394322688882820820, guid: 18a05c4300c20b04cb2b80630544abe6, type: 3}
+  myColor: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  renderer: {fileID: 2569424252568362893}
 --- !u!114 &2569424254284130847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +477,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b3eb760b-b9f3-4e43-bc97-6bfcbee41f97
     m_ActionName: Platformer/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5017588677407091605}
+        m_TargetAssemblyTypeName: PlayerAimShoot, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b3f03759-f483-49f6-ad84-e51ad72bce45
+    m_ActionName: Platformer/Swap[/Mouse/scroll/y]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Platformer
@@ -491,7 +510,7 @@ GameObject:
   - component: {fileID: 5426774978255803655}
   - component: {fileID: 8708185608669900198}
   - component: {fileID: 7436058232730426396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,7 +602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4291166632557356469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

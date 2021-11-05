@@ -9,6 +9,8 @@ public class PlayerAimShoot : MonoBehaviour
     [SerializeField] Transform barrel;
     Vector3 aim;
     [SerializeField] GameObject projectile;
+    [SerializeField] ColorData_SO myColor;
+    [SerializeField] SpriteRenderer renderer;
     public void Aim(InputAction.CallbackContext ctx)
     {
         float angle = Mathf.Atan2 (ctx.ReadValue<Vector2>().y, ctx.ReadValue<Vector2>().x)*Mathf.Rad2Deg;
@@ -24,5 +26,12 @@ public class PlayerAimShoot : MonoBehaviour
             //Debug.Log( Quaternion.FromToRotation(arm.transform.position, barrel.transform.position));
             Instantiate(projectile, barrel.position, arm.rotation);
         }
+    }
+
+    public void ChangeColor(InputAction.CallbackContext ctx)
+    {
+        if(ctx.ReadValue<float>() != 0)
+        myColor.colorData.ChangeColor((int)myColor.colorData.currentSpec + ((ctx.ReadValue<float>() > 0) ? 1 : -1));
+        renderer.color = myColor.colorData.GetColor(myColor.colorData.currentSpec);
     }
 }
