@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce = 5;
     [SerializeField] float speed = 5;
     [SerializeField] float gravity = -9.81f;
+    [SerializeField] float radius = 0.3f;
     int jumpCount = 0;
     int maxJumps = 1;
     [SerializeField] LayerMask groundLayer;
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, 0.2f, groundLayer);
+        isGrounded = Physics.CheckSphere(groundCheck.position, radius, groundLayer);
         if (!isGrounded)
         {
             direction.y += gravity * Time.deltaTime;
