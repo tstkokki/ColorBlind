@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (jumpCount > 0)
+        if (jumpCount > 0 && ctx.ReadValue<float>() > 0)
         {
             direction.y = Mathf.Sqrt(jumpForce * -2f * gravity);
             jumpCount--;
