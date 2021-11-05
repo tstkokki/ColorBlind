@@ -64,7 +64,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -75,40 +75,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Arrows",
-                    "id": "8b9c2fd4-de86-4332-a05a-51722ec7dfdc",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "85b1c369-f3ca-4ef1-a0d1-4a85714753ac",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "a7841b74-dae2-4895-9df9-c8782ccc4999",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -130,7 +97,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -141,7 +108,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -163,7 +130,7 @@
                     "path": "<SwitchProControllerHID>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -174,7 +141,7 @@
                     "path": "<SwitchProControllerHID>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -185,7 +152,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -196,7 +163,7 @@
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -207,7 +174,7 @@
                     "path": "<SwitchProControllerHID>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -218,7 +185,7 @@
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "MainControls",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -247,6 +214,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0cd22543-406d-4c3f-bd9f-c578000e4380",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1136d962-4c7a-4630-a134-ad56a3e7ccc2",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
@@ -266,6 +244,61 @@
                     "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "Arrows",
+                    "id": "8c8b5aa1-94b4-4645-83a3-e52d393aa356",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "e386dfc0-be04-44e5-9e13-b491d49e1249",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "edbfb6d5-e7d0-4964-a377-639034916406",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "dd465be6-25cf-4eb7-b2cf-8791766f8813",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "a5f8733e-c108-4f82-9271-b75a2f883e24",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -305,8 +338,8 @@
     ],
     "controlSchemes": [
         {
-            "name": "New control scheme",
-            "bindingGroup": "New control scheme",
+            "name": "MainControls",
+            "bindingGroup": "MainControls",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
@@ -321,6 +354,11 @@
                 {
                     "devicePath": "<SwitchProControllerHID>",
                     "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
                     "isOR": false
                 }
             ]

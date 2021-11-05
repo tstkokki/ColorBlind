@@ -457,6 +457,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2569424252780503090, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2569424254284130842, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
       propertyPath: m_Height
       value: 1.85
@@ -510,12 +514,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2569424254284130845, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2569424254284130845, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
       propertyPath: gravity
       value: -9.81
       objectReference: {fileID: 0}
     - target: {fileID: 2569424254284130845, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
       propertyPath: jumpForce
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2569424254284130845, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
       propertyPath: groundLayer.m_Bits
@@ -526,7 +534,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2569424254284130847, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2569424254284130847, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2569424254284130847, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2569424254284130847, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
@@ -535,6 +551,10 @@ PrefabInstance:
       objectReference: {fileID: 1251014028}
     - target: {fileID: 2569424254284130847, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2569424254284130847, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2569424254284130847, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
