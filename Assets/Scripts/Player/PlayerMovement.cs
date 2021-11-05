@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
                 jumpCount = maxJumps;
             }
         }
-        Debug.Log(isGrounded + " Jumpcount: " + jumpCount);
+        //Debug.Log(isGrounded + " Jumpcount: " + jumpCount);
         controller.Move(direction * Time.deltaTime);
     }
 
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (jumpCount > 0)
         {
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             direction.y = Mathf.Sqrt(jumpForce * -2f * gravity);
             jumpCount--;
         }
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Move: " + ctx.ReadValue<float>());
+        //Debug.Log("Move: " + ctx.ReadValue<float>());
         direction.x = ctx.ReadValue<float>() * speed;
     }
 }
