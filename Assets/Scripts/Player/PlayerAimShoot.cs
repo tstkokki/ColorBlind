@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerAimShoot : MonoBehaviour
 {
     [SerializeField] Transform arm;
+    [SerializeField] Transform barrel;
     Vector3 aim;
     [SerializeField] GameObject projectile;
     public void Aim(InputAction.CallbackContext ctx)
@@ -18,6 +19,10 @@ public class PlayerAimShoot : MonoBehaviour
     public void Shoot(InputAction.CallbackContext ctx)
     {
         if(ctx.ReadValue<float>() > 0)
-        Instantiate(projectile, arm.position + arm.forward, arm.rotation);
+        {
+            //Debug.Log( Vector3.RotateTowards(arm.transform.position, barrel.transform.position, 6.2f, 1));
+            //Debug.Log( Quaternion.FromToRotation(arm.transform.position, barrel.transform.position));
+            Instantiate(projectile, barrel.position, arm.rotation);
+        }
     }
 }
