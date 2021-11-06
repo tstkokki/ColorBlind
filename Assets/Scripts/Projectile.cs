@@ -30,7 +30,7 @@ public class Projectile : MonoBehaviour
         if (!collision.CompareTag("Player"))
         {
             var _ground = collision.gameObject.GetComponent<GroundSplatGenerator>();
-            if (_ground != null) _ground.GenerateSplat(renderer.color, transform.position);
+            if (_ground != null) _ground.GenerateSplat(transform.position);
 
             ParticleSystem pat = Instantiate(splat, transform.position, transform.rotation);
             var main = pat.main;

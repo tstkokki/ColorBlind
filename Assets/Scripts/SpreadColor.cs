@@ -24,7 +24,7 @@ public class SpreadColor : MonoBehaviour
     IEnumerator Fade(Color color)
     {
         block.SetColor("PaintColor", color);
-        transition = 0.00001f;
+        transition = 0.001f;
         while (transition < 1.5)
         {
             block.SetFloat("Threshold", transition);

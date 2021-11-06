@@ -18,7 +18,7 @@ public class GroundSplatGenerator : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    public void GenerateSplat (Color col, Vector3 collision)
+    public void GenerateSplat (Vector3 collision)
     {
         Vector3 directionV = collision - transform.position;
         Quaternion dir = Quaternion.Euler(new Vector3(0, 0, Mathf.Round((Mathf.Atan2(directionV.y, directionV.x) * Mathf.Rad2Deg - 90) / 90) * 90));
