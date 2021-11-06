@@ -6,19 +6,26 @@ public class SpreadColor : MonoBehaviour
 {
     public SpriteRenderer rend;
     private MaterialPropertyBlock block;
+    private Texture2D replacement;
     private float transition = 0;
 
-    public void StartSplat(Color col)
+    public void StartSplat(Color col, Texture2D tex, Sprite sprite, float dir)
     {
         block = new MaterialPropertyBlock();
         rend = GetComponent<SpriteRenderer>();
+        replacement = new Texture2D(16, 16);
+        replacement.SetPixels(tex.GetPixels((int)sprite.rect.x, (int)sprite.rect.y, (int)sprite.rect.width, (int)sprite.rect.height));
+        replacement.Apply();
+        replacement.filterMode = FilterMode.Point;
         transition = 0.0001f;
-        StartCoroutine(Fade(col));
+        block.SetColor("PaintColor", col);
+        block.SetTexture("Tile", replacement);
+        block.SetFloat("Rotation", dir);
+        StartCoroutine(Fade());
     }
 
-    IEnumerator Fade(Color color)
+    IEnumerator Fade()
     {
-        block.SetColor("PaintColor", color);
         while (transition < 1.5)
         {
             block.SetFloat("Threshold", transition);

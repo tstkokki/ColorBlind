@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GroundSplatGenerator : MonoBehaviour
@@ -25,6 +26,6 @@ public class GroundSplatGenerator : MonoBehaviour
 
         SpreadColor obj = Instantiate(paint, transform.position, dir, transform);
 
-        obj.StartSplat(sr.color);
+        obj.StartSplat(sr.color, sr.sprite.texture, sr.sprite, transform.rotation.eulerAngles.z - dir.eulerAngles.z);
     }
 }
