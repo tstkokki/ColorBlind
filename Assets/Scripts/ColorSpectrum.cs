@@ -23,6 +23,7 @@ public class ColorSpectrum
         return colors[(int)_spec];
     }
 
+
     public void ChangeColor(int _i)
     {
         if(_i > 5)

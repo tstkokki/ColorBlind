@@ -34,4 +34,10 @@ public class PlayerAimShoot : MonoBehaviour
         myColor.colorData.ChangeColor((int)myColor.colorData.currentSpec + ((ctx.ReadValue<float>() > 0) ? 1 : -1));
         renderer.color = myColor.colorData.GetColor(myColor.colorData.currentSpec);
     }
+
+    //private void Update()
+    //{
+    //    Mouse mouse = Mouse.current;
+    //    if(mouse.)
+    //}
 }
