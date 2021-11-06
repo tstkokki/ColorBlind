@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float radius = 0.3f;
     //int jumpCount = 0;
     //int maxJumps = 1;
+    [SerializeField] Animator anim;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform topCheck;
     [SerializeField] Transform groundCheck;
@@ -36,7 +37,9 @@ public class PlayerMovement : MonoBehaviour
         isGrounded =
             Physics.CheckSphere(groundCheck.position, radius, groundLayer)
             || Physics.CheckSphere(groundCheck2.position, radius, groundLayer);
-        
+
+        anim.SetBool("Grounded", isGrounded);
+
         //if player is in the air, apply gravity
         if (!isGrounded)
         {
@@ -49,10 +52,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 direction.y = 0;
             }
+            
             //if (jumpCount < maxJumps)
             //{
             //    jumpCount = maxJumps;
             //}
+        }
+        if (direction.x < 0.1 && direction.x > -0.1 || !isGrounded)
+        {
+            anim.SetBool("Walking", false);
+        }
+        else
+        {
+            anim.SetBool("Walking", true);
         }
         controller.Move(direction * Time.deltaTime);
     }
@@ -63,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && ctx.performed)
         {
             direction.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            anim.SetBool("Grounded", false);
             //jumpCount--;
         }
     }
