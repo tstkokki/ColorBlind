@@ -21,6 +21,9 @@ public class Projectile : MonoBehaviour
         rb.AddForce(transform.right * force, ForceMode.Impulse);
         renderer = GetComponent<SpriteRenderer>();
         renderer.color = colorData.colorData.GetColor(colorData.colorData.currentSpec);
+        var main = transform.GetChild(0).GetComponent<ParticleSystem>().main;
+        main.startColor = renderer.color;
+
         Destroy(gameObject, 5f);
 
     }
@@ -29,12 +32,17 @@ public class Projectile : MonoBehaviour
     {
         if (!collision.CompareTag("Player"))
         {
+            // splat dissolve
             var _ground = collision.gameObject.GetComponent<GroundSplatGenerator>();
-            if (_ground != null) _ground.GenerateSplat(transform.position);
-
+            if (_ground != null)
+            {
+                _ground.GenerateSplat(transform.position);
+            }
+            //particle effect to spawn on impact
             ParticleSystem pat = Instantiate(splat, transform.position, transform.rotation);
             var main = pat.main;
             main.startColor = renderer.color;
+            //set the color behaviour of the target
             ColorBehaviour _other = collision.gameObject.GetComponent<ColorBehaviour>();
             if (_other != null) _other.ChangeColor(_mySpec);
 

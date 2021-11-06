@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61713895633f9a54f99623bd8193dc89, type: 3}
   m_Name: GreenPaint
   m_EditorClassIdentifier: 
-  Amount: 0
+  Amount: 90
   maxAmount: 100
-  _color: {r: 0, g: 0.6509804, b: 0, a: 1}
+  _color: {r: 0.5019608, g: 0.8156863, b: 0.0627451, a: 1}

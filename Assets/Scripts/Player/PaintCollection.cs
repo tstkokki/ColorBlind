@@ -6,6 +6,7 @@ using UnityEngine;
 public class PaintCollection : ScriptableObject
 {
     public List<PaintAmount_SO> paints = new List<PaintAmount_SO>();
+    //current index the player is using
     public int currentIndex;
     /// <summary>
     /// Get the amount of paint of color by index
@@ -22,6 +23,10 @@ public class PaintCollection : ScriptableObject
         return 0;
     }
 
+    /// <summary>
+    /// Set the index of paint collection
+    /// </summary>
+    /// <param name="i"></param>
     public void SetIndex(int i)
     {
         if (i < paints.Count && i >= 0)

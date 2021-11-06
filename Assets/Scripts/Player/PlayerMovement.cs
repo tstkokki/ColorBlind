@@ -32,9 +32,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //check if either foot is touching the ground
         isGrounded =
             Physics.CheckSphere(groundCheck.position, radius, groundLayer)
             || Physics.CheckSphere(groundCheck2.position, radius, groundLayer);
+        
+        //if player is in the air, apply gravity
         if (!isGrounded)
         {
             direction.y += gravity * 1.5f * Time.deltaTime;
