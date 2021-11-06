@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext ctx)
     {
         //if player is grounded and input is performed
-        if (isGrounded && ctx.ReadValue<float>() > 0)
+        if (isGrounded && ctx.performed)
         {
             direction.y = Mathf.Sqrt(jumpForce * -2f * gravity);
             //jumpCount--;

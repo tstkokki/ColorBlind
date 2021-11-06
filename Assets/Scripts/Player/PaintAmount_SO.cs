@@ -6,7 +6,7 @@ public class PaintAmount_SO : ScriptableObject
 {
     public int Amount;
     public int maxAmount;
-
+    public Color _color;
     /// <summary>
     /// Change amount of paint by current amount + _amount, clamped between 0 and max amount
     /// </summary>
