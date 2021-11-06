@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goomba : ColorBehaviour
+public class FlyerOC : ColorBehaviour
 {
     public float jumpPower = 0.5f;
     Rigidbody goombaRB;
     float time = 0f;
+    float time2 = 0f;
     private bool isJumping = false;
-    Vector3 startPos;
+    Vector3 startPos, startPos2;
+
+    string baseTag;
 
     bool hasTriggered = false;
+    bool hasTriggered2 = false;
 
     public GameObject player;
 
@@ -20,7 +24,9 @@ public class Goomba : ColorBehaviour
     {
         goombaRB = GetComponent<Rigidbody>();
         startPos = transform.position;
+        startPos2 = transform.position;
         player = GameObject.FindWithTag("Player");
+        baseTag = gameObject.tag;
     }
 
     // Update is called once per frame
@@ -37,7 +43,9 @@ public class Goomba : ColorBehaviour
         switch (_mySpec)
         {
             case ColorSpectrum.ColorSpec.Green:
+                gameObject.tag = baseTag;
                 Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+                hasTriggered2 = false;
                 if (!hasTriggered)
                 {
                     hasTriggered = true;
@@ -45,42 +53,47 @@ public class Goomba : ColorBehaviour
                 }                           
                 time += Time.deltaTime;
                 transform.position = startPos + Vector3.right * Mathf.Sin(time * 1.5f) * 2;
+
+                time2 = 0f;
                 break;
 
             case ColorSpectrum.ColorSpec.Red:
+                gameObject.tag = baseTag;
                 Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
                 hasTriggered = false;
-                goombaRB.useGravity = true;
+                goombaRB.useGravity = false;
 
-                if (goombaRB.velocity.magnitude > 0)
+                if(!hasTriggered2)
                 {
-                    isJumping = true;
+                    hasTriggered2 = true;
+                    startPos2 = transform.position;
                 }
-                else
-                {
-                    isJumping = false;
-                }
-                if(!isJumping)
-                {
-                    goombaRB.AddForce(new Vector3(0, jumpPower, 0), ForceMode.Impulse);
-                }
+                time2 += Time.deltaTime;
+                transform.position = startPos2 + Vector3.up * Mathf.Sin(time2 * 1.5f) * 2;
+
                 time = 0f;
                 break;
 
             case ColorSpectrum.ColorSpec.Blue:
+                gameObject.tag = baseTag;
                 hasTriggered = false;
+                hasTriggered2 = false;
                 Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
                 goombaRB.velocity = new Vector3(0, 0, 0);
                 goombaRB.useGravity = false;
                 transform.position = transform.position;
                 time = 0f;
+                time2 = 0f;
                 break;
 
             case ColorSpectrum.ColorSpec.White:
+                gameObject.tag = baseTag;
+                hasTriggered2 = false;
                 hasTriggered = false;
-                goombaRB.useGravity = true;
+                goombaRB.useGravity = false;
                 Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), true);
                 time = 0f;
+                time2 = 0f;
                 break;
 
             case ColorSpectrum.ColorSpec.Black:
