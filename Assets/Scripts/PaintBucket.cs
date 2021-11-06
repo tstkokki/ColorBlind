@@ -4,33 +4,23 @@ using UnityEngine;
 
 public class PaintBucket : MonoBehaviour
 {
-    private float deg = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(Float());
-    }
+    [SerializeField] PaintAmount_SO paint;
+    public int paintAmount;
+    public float floatSpeed;
+    public float floatAmount;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(Time.time * floatSpeed) * floatAmount);
     }
 
-    IEnumerator Float()
+    private void OnTriggerEnter(Collider other)
     {
-        while (true)
+        if (other.gameObject.CompareTag("Player"))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(deg * Mathf.Deg2Rad) * 0.00075f);
-            if (deg >= 360)
-            {
-                deg = 0;
-            }
-            else
-            {
-                deg += 0.5f;
-            }
-            yield return new WaitForEndOfFrame();
+            paint.ChangeAmount(paintAmount);
+            Destroy(gameObject);
         }
     }
 }
