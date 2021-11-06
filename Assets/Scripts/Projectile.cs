@@ -21,6 +21,9 @@ public class Projectile : MonoBehaviour
         rb.AddForce(transform.right * force, ForceMode.Impulse);
         renderer = GetComponent<SpriteRenderer>();
         renderer.color = colorData.colorData.GetColor(colorData.colorData.currentSpec);
+        var main = transform.GetChild(0).GetComponent<ParticleSystem>().main;
+        main.startColor = renderer.color;
+
         Destroy(gameObject, 5f);
 
     }
