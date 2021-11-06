@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7848773639462323791}
   - component: {fileID: 7848773639462323787}
   m_Layer: 6
-  m_Name: Block
+  m_Name: Terrain_Top
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: -1704665453608025675, guid: 02adaecf35ffd84498587839dd724e4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

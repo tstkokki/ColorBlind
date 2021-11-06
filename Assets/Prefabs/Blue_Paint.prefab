@@ -4818,7 +4818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547af78f367458347be675f2e0c06fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pa: {fileID: 11400000, guid: 981349e1e3d5e244d9ebe8bf2b600821, type: 2}
+  pa: {fileID: 11400000, guid: c38722586695d24489731634956b0b14, type: 2}
 --- !u!1 &4050752766606913492
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,7 +4832,7 @@ GameObject:
   - component: {fileID: 4050752766606913494}
   - component: {fileID: 4050752766606913493}
   m_Layer: 0
-  m_Name: Paint
+  m_Name: Blue_Paint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4893,7 +4893,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7506004875777137400, guid: 02adaecf35ffd84498587839dd724e4d, type: 3}
+  m_Sprite: {fileID: -158892521465118681, guid: 02adaecf35ffd84498587839dd724e4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4929,7 +4929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb06dd859e2d9a840aba2f4d5bfbe172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paint: {fileID: 11400000, guid: 981349e1e3d5e244d9ebe8bf2b600821, type: 2}
+  paint: {fileID: 11400000, guid: c38722586695d24489731634956b0b14, type: 2}
   paintAmount: 45
   floatSpeed: 2
   floatAmount: 0.00075
