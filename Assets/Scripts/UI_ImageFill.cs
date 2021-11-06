@@ -40,6 +40,7 @@ public class UI_ImageFill : MonoBehaviour
         greenPaintAmount = new IntReactiveProperty(collection.paints[2].Amount);
         bluePaintAmount = new IntReactiveProperty(collection.paints[3].Amount);
 
+        //reactive paint amounts
         whitePaintAmount.ObserveEveryValueChanged(x => collection.paints[0].Amount)
             .TakeUntilDestroy(gameObject)
             .Subscribe(y => FillImage(0));
@@ -59,7 +60,10 @@ public class UI_ImageFill : MonoBehaviour
 
     private void FillImage(int i)
     {
-        
-            image.fillAmount = collection.paints[i].Amount * 1.0f/ collection.paints[i].maxAmount;
+        if (collection.currentIndex == i)
+        {
+            image.fillAmount = collection.paints[i].Amount * 1.0f / collection.paints[i].maxAmount;
+
+        }
     }
 }
