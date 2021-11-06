@@ -34,6 +34,9 @@ public class Projectile : MonoBehaviour
             main.startColor = renderer.color;
             ColorBehaviour _other = collision.gameObject.GetComponent<ColorBehaviour>();
             if (_other != null) _other.ChangeColor(_mySpec);
+
+            var _ground = collision.gameObject.GetComponent<GroundSplatGenerator>();
+            //if(_ground != null) _ground.gene
             Destroy(gameObject);
         }
     }
