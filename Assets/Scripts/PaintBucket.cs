@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PaintBucket : MonoBehaviour
 {
+    private float deg = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,18 +19,18 @@ public class PaintBucket : MonoBehaviour
 
     IEnumerator Float()
     {
-        float deg = 0;
         while (true)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(deg * Mathf.Deg2Rad));
+            transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(deg * Mathf.Deg2Rad) * 0.00075f);
             if (deg >= 360)
             {
                 deg = 0;
             }
             else
             {
-                deg++;
-            } 
+                deg += 0.5f;
+            }
+            yield return new WaitForEndOfFrame();
         }
     }
 }
