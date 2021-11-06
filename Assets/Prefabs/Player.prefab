@@ -504,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 180a88998424b1f4ebf64ee62884d528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: {fileID: 11400000, guid: af052cfae4f88c444b8d18cc453f3888, type: 2}
   jumpForce: 2
   speed: 5
   gravity: -9.81
@@ -514,6 +515,7 @@ MonoBehaviour:
   topCheck: {fileID: 8431870916807103826}
   groundCheck: {fileID: 903636905505034624}
   groundCheck2: {fileID: 5888085976311867916}
+  renderer: {fileID: 2569424252568362893}
 --- !u!114 &5017588677407091605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,6 +644,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b3f03759-f483-49f6-ad84-e51ad72bce45
     m_ActionName: Platformer/Swap[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2095e6b8-8c90-4675-af39-6a537ab1a5db
+    m_ActionName: Platformer/Color0[/Keyboard/f1]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Platformer
