@@ -7,11 +7,6 @@ public class SpreadColor : MonoBehaviour
     public SpriteRenderer rend;
     private MaterialPropertyBlock block;
     private float transition = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void StartSplat(Color col)
     {
