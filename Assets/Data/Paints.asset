@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d7d5602d2119a4a865e83d749242b5, type: 3}
+  m_Name: Paints
+  m_EditorClassIdentifier: 
+  paints:
+  - {fileID: 11400000, guid: 0828d7f76f541ff42b0d1c9a64361e71, type: 2}
+  - {fileID: 11400000, guid: 981349e1e3d5e244d9ebe8bf2b600821, type: 2}
+  - {fileID: 11400000, guid: d47abfad0909627469ec6e4200ac67f2, type: 2}
+  - {fileID: 11400000, guid: c38722586695d24489731634956b0b14, type: 2}
