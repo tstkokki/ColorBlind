@@ -9,6 +9,7 @@ public class PlayerAimShoot : MonoBehaviour
     [SerializeField] Transform barrel;
     [SerializeField] Camera cam;
     Vector3 aim;
+    [SerializeField] PaintCollection paints;
     [SerializeField] GameObject projectile;
     [SerializeField] ColorData_SO myColor;
     [SerializeField] SpriteRenderer renderer;
@@ -23,9 +24,11 @@ public class PlayerAimShoot : MonoBehaviour
     {
         if(ctx.ReadValue<float>() > 0)
         {
-            //Debug.Log( Vector3.RotateTowards(arm.transform.position, barrel.transform.position, 6.2f, 1));
-            //Debug.Log( Quaternion.FromToRotation(arm.transform.position, barrel.transform.position));
-            Instantiate(projectile, barrel.position, arm.rotation);
+            if(paints.Get((int)myColor.colorData.currentSpec) > 0)
+            {
+                Instantiate(projectile, barrel.position, arm.rotation);
+                paints.Increment((int)myColor.colorData.currentSpec);
+            }
         }
     }
 
