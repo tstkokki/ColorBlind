@@ -10,15 +10,16 @@ public class ColorBehaviour : MonoBehaviour
     [SerializeField] protected ColorSpectrum.ColorSpec _mySpec;
 
     Vector3 startPos;
+    float time = 0;
     // Start is called before the first frame update
     protected void Start()
     {
         startPos = transform.position;
         renderer = GetComponent<SpriteRenderer>();
-        ColorResponse();
+        ChangeColor(_mySpec);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         Behaviours();
     }
@@ -35,10 +36,10 @@ public class ColorBehaviour : MonoBehaviour
         switch (_mySpec)
         {
             case ColorSpectrum.ColorSpec.White:
-                transform.position = transform.position + Vector3.forward*2;
+                transform.position = new Vector3(transform.position.x, transform.position.y, startPos.z+2);
                 break;
             default:
-                transform.position = startPos;
+                transform.position = new Vector3( transform.position.x, transform.position.y, startPos.z);
                 break;
         }
     }
@@ -56,7 +57,12 @@ public class ColorBehaviour : MonoBehaviour
             case ColorSpectrum.ColorSpec.Green:
                 //origin.x + Mathf.Sin(Time.time * speed) * amount,
                 //transform.localPosition.y, transform.localPosition.z);
-                //transform.position = 
+                time += Time.deltaTime;
+                transform.position = startPos + Vector3.right * Mathf.Sin(time * 1.5f) * 2;
+                break;
+            case ColorSpectrum.ColorSpec.Red:
+                time += Time.deltaTime;
+                transform.position = startPos + Vector3.up * Mathf.Sin(time * 1.5f) * 2;
                 break;
             default:
                 break;
