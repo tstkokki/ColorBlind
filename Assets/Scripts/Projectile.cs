@@ -11,11 +11,13 @@ public class Projectile : MonoBehaviour
     [SerializeField] LayerMask effectLayer;
     [SerializeField] ColorData_SO colorData;
     [SerializeField] SpriteRenderer renderer;
+    ColorSpectrum.ColorSpec _mySpec;
     // Start is called before the first frame update
     void Start()
     {
         if (rb == null) rb = GetComponent<Rigidbody>();
-        
+
+        _mySpec = colorData.colorData.currentSpec;
         rb.AddForce(transform.right * force, ForceMode.Impulse);
         renderer = GetComponent<SpriteRenderer>();
         renderer.color = colorData.colorData.GetColor(colorData.colorData.currentSpec);
@@ -30,6 +32,8 @@ public class Projectile : MonoBehaviour
             ParticleSystem pat = Instantiate(splat, transform.position, transform.rotation);
             var main = pat.main;
             main.startColor = renderer.color;
+            ColorBehaviour _other = collision.gameObject.GetComponent<ColorBehaviour>();
+            if (_other != null) _other.ChangeColor(_mySpec);
             Destroy(gameObject);
         }
     }
