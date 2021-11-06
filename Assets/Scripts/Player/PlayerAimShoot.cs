@@ -7,6 +7,7 @@ public class PlayerAimShoot : MonoBehaviour
 {
     [SerializeField] Transform arm;
     [SerializeField] Transform barrel;
+    [SerializeField] Camera cam;
     Vector3 aim;
     [SerializeField] GameObject projectile;
     [SerializeField] ColorData_SO myColor;
@@ -35,9 +36,5 @@ public class PlayerAimShoot : MonoBehaviour
         renderer.color = myColor.colorData.GetColor(myColor.colorData.currentSpec);
     }
 
-    //private void Update()
-    //{
-    //    Mouse mouse = Mouse.current;
-    //    if(mouse.)
-    //}
+    
 }

@@ -11,11 +11,12 @@ public class ColorSpectrum
         Green = 2,
         Blue = 3,
         Yellow = 4,
-        Purple = 5
+        Purple = 5,
+        Black = 6
     }
 
     Color[] colors = new Color[]{
-        Color.white, Color.red, Color.green, Color.blue, Color.yellow, Color.magenta
+        Color.white, Color.red, Color.green, Color.blue, Color.yellow, Color.magenta, Color.black
     };
     public ColorSpec currentSpec = ColorSpec.White;
     public Color GetColor(ColorSpec _spec)
@@ -26,14 +27,14 @@ public class ColorSpectrum
 
     public void ChangeColor(int _i)
     {
-        if(_i > 5)
+        if(_i > 3)
         {
-            currentSpec = ColorSpec.Red;
+            currentSpec = ColorSpec.White;
             return;
         }
         if(_i < 0)
         {
-            currentSpec = ColorSpec.Purple;
+            currentSpec = ColorSpec.Blue;
             return;
         }
         currentSpec = (ColorSpec)_i;

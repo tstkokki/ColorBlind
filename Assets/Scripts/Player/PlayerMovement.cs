@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform topCheck;
     [SerializeField] Transform groundCheck;
+    [SerializeField] Transform groundCheck2;
     CharacterController controller;
     Vector3 direction = Vector3.zero;
     bool isGrounded;
@@ -28,10 +29,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, radius, groundLayer);
+        isGrounded =
+            Physics.CheckSphere(groundCheck.position, radius, groundLayer)
+            || Physics.CheckSphere(groundCheck2.position, radius, groundLayer);
         if (!isGrounded)
         {
-            direction.y += gravity * Time.deltaTime;
+            direction.y += gravity * 1.5f * Time.deltaTime;
+            direction.y = Mathf.Max(direction.y, -10);
         }
         else
         {
@@ -60,4 +64,5 @@ public class PlayerMovement : MonoBehaviour
     {
         direction.x = ctx.ReadValue<float>() * speed;
     }
+
 }
