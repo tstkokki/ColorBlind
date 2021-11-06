@@ -260,7 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2569424252568362890}
   - component: {fileID: 2569424252568362893}
-  - component: {fileID: 1463206844783703209}
+  - component: {fileID: 607221090}
   m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
@@ -333,7 +333,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1463206844783703209
+--- !u!95 &607221090
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
   speed: 5
   gravity: -9.81
   radius: 0.2
-  anim: {fileID: 1463206844783703209}
+  anim: {fileID: 607221090}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
