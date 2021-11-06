@@ -7,7 +7,7 @@ using UniRx;
 public class PlayerMovement : MonoBehaviour
 {
 
-    Vector3 startPos;
+    [SerializeField] VectorThree_SO startPos;
     [SerializeField] float jumpForce = 5;
     [SerializeField] float speed = 5;
     [SerializeField] float gravity = -9.81f;
@@ -21,10 +21,11 @@ public class PlayerMovement : MonoBehaviour
     CharacterController controller;
     Vector3 direction = Vector3.zero;
     bool isGrounded;
+    [SerializeField] SpriteRenderer renderer;
     // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position;
+        startPos.Set(transform.position);
         controller = GetComponent<CharacterController>();
     }
 
@@ -70,6 +71,14 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         direction.x = ctx.ReadValue<float>() * speed;
+        if(direction.x > 0 && renderer.flipX)
+        {
+            renderer.flipX = false;
+        }
+        if(direction.x < 0 && !renderer.flipX)
+        {
+            renderer.flipX = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -78,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         {
             direction = Vector3.zero;
             controller.enabled = false;
-            transform.position = startPos + Vector3.up;
+            transform.position =  startPos.Get() + Vector3.up;
             controller.enabled = true;
         }
     }
