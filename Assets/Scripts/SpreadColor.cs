@@ -17,19 +17,18 @@ public class SpreadColor : MonoBehaviour
     {
         block = new MaterialPropertyBlock();
         rend = GetComponent<SpriteRenderer>();
-        transition = 0;
+        transition = 0.0001f;
         StartCoroutine("Fade", col);
     }
 
     IEnumerator Fade(Color color)
     {
         block.SetColor("PaintColor", color);
-        transition = 0.001f;
         while (transition < 1.5)
         {
             block.SetFloat("Threshold", transition);
             rend.SetPropertyBlock(block);
-            transition = Mathf.Sqrt(transition);
+            transition = Mathf.Pow(transition, 1f / 4f);
             if (transition > 0.9995f)
             {
                 transition = 1.5f;
@@ -38,7 +37,7 @@ public class SpreadColor : MonoBehaviour
             }
             else
             {
-                yield return new WaitForSeconds(Time.deltaTime * 20);
+                yield return new WaitForSeconds(0.1f);
             }
         }
     }
