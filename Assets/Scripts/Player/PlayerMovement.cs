@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce = 5;
     [SerializeField] float speed = 5;
     [SerializeField] float gravity = -9.81f;
+    [SerializeField] float radius = 0.3f;
     int jumpCount = 0;
     int maxJumps = 1;
     [SerializeField] LayerMask groundLayer;
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, 0.2f, groundLayer);
+        isGrounded = Physics.CheckSphere(groundCheck.position, radius, groundLayer);
         if (!isGrounded)
         {
             direction.y += gravity * Time.deltaTime;
@@ -43,15 +44,21 @@ public class PlayerMovement : MonoBehaviour
                 jumpCount = maxJumps;
             }
         }
+<<<<<<< HEAD
         //Debug.Log(isGrounded + " Jumpcount: " + jumpCount);
+=======
+>>>>>>> main
         controller.Move(direction * Time.deltaTime);
     }
 
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (jumpCount > 0)
+        if (jumpCount > 0 && ctx.ReadValue<float>() > 0)
         {
+<<<<<<< HEAD
             //Debug.Log("Jump");
+=======
+>>>>>>> main
             direction.y = Mathf.Sqrt(jumpForce * -2f * gravity);
             jumpCount--;
         }
@@ -59,7 +66,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
+<<<<<<< HEAD
         //Debug.Log("Move: " + ctx.ReadValue<float>());
+=======
+>>>>>>> main
         direction.x = ctx.ReadValue<float>() * speed;
     }
 }
