@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61713895633f9a54f99623bd8193dc89, type: 3}
   m_Name: WhitePaint
   m_EditorClassIdentifier: 
-  Amount: 36
+  Amount: 90
   maxAmount: 100
   _color: {r: 1, g: 1, b: 1, a: 1}
