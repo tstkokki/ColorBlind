@@ -58,11 +58,11 @@ public class ColorBehaviour : MonoBehaviour
                 //origin.x + Mathf.Sin(Time.time * speed) * amount,
                 //transform.localPosition.y, transform.localPosition.z);
                 time += Time.deltaTime;
-                transform.position = startPos + Vector3.right * Mathf.Sin(time * 1.5f) * 2;
+                transform.position = new Vector3( startPos.x + 1 * Mathf.Sin(time * 1.5f) * 2, transform.position.y, 0);
                 break;
             case ColorSpectrum.ColorSpec.Red:
                 time += Time.deltaTime;
-                transform.position = startPos + Vector3.up * Mathf.Sin(time * 1.5f) * 2;
+                transform.position = new Vector3(transform.position.x, startPos.y + 1 * Mathf.Sin(time * 1.5f) * 2, 0);
                 break;
             default:
                 break;

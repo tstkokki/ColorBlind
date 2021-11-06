@@ -67,7 +67,8 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("Walking", true);
         }
-        controller.Move(direction * Time.deltaTime);
+        if(direction.x > 0 || direction.x < 0 || direction.y > 0 || direction.y < 0)
+            controller.Move(direction * Time.deltaTime);
     }
 
     public void Jump(InputAction.CallbackContext ctx)
