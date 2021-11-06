@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed = 5;
     [SerializeField] float gravity = -9.81f;
     [SerializeField] float radius = 0.3f;
-    int jumpCount = 0;
-    int maxJumps = 1;
+    //int jumpCount = 0;
+    //int maxJumps = 1;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform topCheck;
     [SerializeField] Transform groundCheck;
@@ -32,9 +32,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //check if either foot is touching the ground
         isGrounded =
             Physics.CheckSphere(groundCheck.position, radius, groundLayer)
             || Physics.CheckSphere(groundCheck2.position, radius, groundLayer);
+        
+        //if player is in the air, apply gravity
         if (!isGrounded)
         {
             direction.y += gravity * 1.5f * Time.deltaTime;
@@ -46,20 +49,21 @@ public class PlayerMovement : MonoBehaviour
             {
                 direction.y = 0;
             }
-            if (jumpCount < maxJumps)
-            {
-                jumpCount = maxJumps;
-            }
+            //if (jumpCount < maxJumps)
+            //{
+            //    jumpCount = maxJumps;
+            //}
         }
         controller.Move(direction * Time.deltaTime);
     }
 
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (jumpCount > 0 && ctx.ReadValue<float>() > 0)
+        //if player is grounded and input is performed
+        if (isGrounded && ctx.performed)
         {
             direction.y = Mathf.Sqrt(jumpForce * -2f * gravity);
-            jumpCount--;
+            //jumpCount--;
         }
     }
 
@@ -73,15 +77,10 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Killzone"))
         {
             direction = Vector3.zero;
-        controller.enabled = false;
-        transform.position = startPos + Vector3.up;
-        controller.enabled = true;
-            //StartCoroutine(Respawn(4));
+            controller.enabled = false;
+            transform.position = startPos + Vector3.up;
+            controller.enabled = true;
         }
     }
 
-    //IEnumerator Respawn(int asjdhl)
-    //{
-    //    yield return new WaitForEndOfFrame();
-    //}
 }

@@ -1,7 +1,106 @@
 fileFormatVersion: 2
 guid: 02adaecf35ffd84498587839dd724e4d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2865370674213822099
+    second: ColorBlind_Sprites_0
+  - first:
+      213: -204828450181731922
+    second: Character_idle
+  - first:
+      213: -6037907905826688052
+    second: Character_walking1
+  - first:
+      213: 9090908912554085458
+    second: Character_walking2
+  - first:
+      213: -3201763160006618529
+    second: Character_walking3
+  - first:
+      213: -1016527345778743431
+    second: Character_walking4
+  - first:
+      213: 5700431647409189150
+    second: Gun
+  - first:
+      213: 7404439699367254519
+    second: Walking_enemy_1
+  - first:
+      213: -8727639363801577624
+    second: Walking_enemy_2
+  - first:
+      213: -7642907274312189442
+    second: Flying_enemy_1
+  - first:
+      213: -1510379239086291373
+    second: Flying_enemy_2
+  - first:
+      213: -1704665453608025675
+    second: White_terrain
+  - first:
+      213: 6214775657573882050
+    second: White_platform
+  - first:
+      213: 3996749218057877868
+    second: Black_terrain
+  - first:
+      213: -436835999121384484
+    second: Red_platform
+  - first:
+      213: -1826261563614977293
+    second: Blue_platform
+  - first:
+      213: 3633022778107212947
+    second: Green_platform
+  - first:
+      213: 7506004875777137400
+    second: Red_paint
+  - first:
+      213: -158892521465118681
+    second: Blue_paint
+  - first:
+      213: -234746752385249531
+    second: Green_paint
+  - first:
+      213: 9024417094096798240
+    second: Black_terrain
+  - first:
+      213: -6171069590382562576
+    second: Red_terrain
+  - first:
+      213: -1977324779620981489
+    second: Blue_terrain
+  - first:
+      213: -1530447632768255804
+    second: Green_terrain
+  - first:
+      213: -4967094091706939927
+    second: White_updown_terrain
+  - first:
+      213: -3735258308173343003
+    second: White_U_terrain
+  - first:
+      213: -5633588606894912635
+    second: White_corner_terrain
+  - first:
+      213: 1597306464392906444
+    second: White_full_terrain
+  - first:
+      213: 5569358993153993497
+    second: White_single_terrain
+  - first:
+      213: 3768821887471945535
+    second: White_paint
+  - first:
+      213: -3249683079251324137
+    second: White_right_platform
+  - first:
+      213: -1755260343586047764
+    second: White_middle_platform
+  - first:
+      213: 5841280468769175575
+    second: White_left_platform
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,11 +140,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 6
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: 0, y: 0}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -125,7 +224,700 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ColorBlind_Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 128
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e16526277d3c720800000000000000
+      internalID: 2865370674213822099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_idle
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 80
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9260b1c9d482df0800000000000000
+      internalID: -204828450181731922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_walking1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 80
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc37da6ffba053ca0800000000000000
+      internalID: -6037907905826688052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_walking2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 80
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c08328d75692e70800000000000000
+      internalID: 9090908912554085458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_walking3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 80
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f529fd0ae5d0193d0800000000000000
+      internalID: -3201763160006618529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_walking4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 80
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977236ac3c194e1f0800000000000000
+      internalID: -1016527345778743431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 83
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11383291600c1f40800000000000000
+      internalID: 5700431647409189150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walking_enemy_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9d5991daad1c660800000000000000
+      internalID: 7404439699367254519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walking_enemy_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 64
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86704e85d3231e680800000000000000
+      internalID: -8727639363801577624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_enemy_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 66
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef97f5fe350fee590800000000000000
+      internalID: -7642907274312189442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_enemy_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 67
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356032a951e0a0be0800000000000000
+      internalID: -1510379239086291373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_terrain
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b140d83dcfc758e0800000000000000
+      internalID: -1704665453608025675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_platform
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c89f6488815f3650800000000000000
+      internalID: 6214775657573882050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_platform
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69f8a6fc3e477730800000000000000
+      internalID: 3996749218057877868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_platform
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb544729fb00f9f0800000000000000
+      internalID: -436835999121384484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_platform
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2a7c9a8c0d7a6e0800000000000000
+      internalID: -1826261563614977293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_platform
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394bbf5d7f61b6230800000000000000
+      internalID: 3633022778107212947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_paint
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fadb0f7aafaa2860800000000000000
+      internalID: 7506004875777137400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_paint
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7200b94f7108bcdf0800000000000000
+      internalID: -158892521465118681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_paint
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f86eb82130ebcf0800000000000000
+      internalID: -234746752385249531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_terrain
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0224a9e988b2d3d70800000000000000
+      internalID: 9024417094096798240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_terrain
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2380d37e4fb5aa0800000000000000
+      internalID: -6171069590382562576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_terrain
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f052d19d6912f84e0800000000000000
+      internalID: -1977324779620981489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_terrain
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8b2859cf1c2cae0800000000000000
+      internalID: -1530447632768255804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_updown_terrain
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5cdd98d36511bb0800000000000000
+      internalID: -4967094091706939927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_U_terrain
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e65005eb52b92cc0800000000000000
+      internalID: -3735258308173343003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_corner_terrain
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b4753920971d1b0800000000000000
+      internalID: -5633588606894912635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_full_terrain
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6039734c5ca2610800000000000000
+      internalID: 1597306464392906444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_single_terrain
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b229d1f765a4d40800000000000000
+      internalID: 5569358993153993497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_paint
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 32
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f378b70e98b8d4430800000000000000
+      internalID: 3768821887471945535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_right_platform
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 33
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71390acf47ec6e2d0800000000000000
+      internalID: -3249683079251324137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_middle_platform
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 33
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8393c640014a7e0800000000000000
+      internalID: -1755260343586047764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_left_platform
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 33
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718f96e43a5601150800000000000000
+      internalID: 5841280468769175575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
