@@ -6,6 +6,7 @@ public class LevelTransition : MonoBehaviour
 {
     // reference to next level prefab
     [SerializeField] GameObject nextLevel;
+    [SerializeField] GameEvent movePlayer;
     //reference to next safe point
     [SerializeField] ParticleSystem bigSmoke;
     Collider collider;
@@ -20,7 +21,10 @@ public class LevelTransition : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             collider.enabled = false;
+            nextLevel.SetActive(true);
+
             Instantiate(bigSmoke, transform.position, bigSmoke.transform.rotation);
+            movePlayer.Raise();
         }
     }
 }
