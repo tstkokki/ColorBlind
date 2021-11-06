@@ -6,6 +6,8 @@ using UniRx;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    Vector3 startPos;
     [SerializeField] float jumpForce = 5;
     [SerializeField] float speed = 5;
     [SerializeField] float gravity = -9.81f;
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startPos = transform.position;
         controller = GetComponent<CharacterController>();
     }
 
@@ -65,4 +68,11 @@ public class PlayerMovement : MonoBehaviour
         direction.x = ctx.ReadValue<float>() * speed;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Killzone"))
+        {
+            transform.position = startPos;
+        }
+    }
 }

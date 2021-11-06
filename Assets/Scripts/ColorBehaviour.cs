@@ -36,7 +36,7 @@ public class ColorBehaviour : MonoBehaviour
         switch (_mySpec)
         {
             case ColorSpectrum.ColorSpec.White:
-                transform.position = startPos + Vector3.forward*2;
+                transform.position = new Vector3(transform.position.x, transform.position.y, startPos.z+2);
                 break;
             default:
                 transform.position = new Vector3( transform.position.x, transform.position.y, startPos.z);
@@ -59,6 +59,10 @@ public class ColorBehaviour : MonoBehaviour
                 //transform.localPosition.y, transform.localPosition.z);
                 time += Time.deltaTime;
                 transform.position = startPos + Vector3.right * Mathf.Sin(time * 1.5f) * 2;
+                break;
+            case ColorSpectrum.ColorSpec.Red:
+                time += Time.deltaTime;
+                transform.position = startPos + Vector3.up * Mathf.Sin(time * 1.5f) * 2;
                 break;
             default:
                 break;
