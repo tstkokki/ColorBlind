@@ -15,16 +15,16 @@ public class PlayerAimShoot : MonoBehaviour
     [SerializeField] SpriteRenderer renderer;
     public void Aim(InputAction.CallbackContext ctx)
     {
-        float angle = Mathf.Atan2 (ctx.ReadValue<Vector2>().y, ctx.ReadValue<Vector2>().x)*Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(ctx.ReadValue<Vector2>().y, ctx.ReadValue<Vector2>().x) * Mathf.Rad2Deg;
         aim.z = angle;
         arm.rotation = Quaternion.Euler(aim);
     }
 
     public void Shoot(InputAction.CallbackContext ctx)
     {
-        if(ctx.ReadValue<float>() > 0)
+        if (ctx.performed)
         {
-            if(paints.Get((int)myColor.colorData.currentSpec) > 0)
+            if (paints.Get((int)myColor.colorData.currentSpec) > 0)
             {
                 Instantiate(projectile, barrel.position, arm.rotation);
                 paints.Increment((int)myColor.colorData.currentSpec);
@@ -34,10 +34,14 @@ public class PlayerAimShoot : MonoBehaviour
 
     public void ChangeColor(InputAction.CallbackContext ctx)
     {
-        if(ctx.ReadValue<float>() != 0)
-        myColor.colorData.ChangeColor((int)myColor.colorData.currentSpec + ((ctx.ReadValue<float>() > 0) ? 1 : -1));
-        renderer.color = myColor.colorData.GetColor(myColor.colorData.currentSpec);
+        if (ctx.ReadValue<float>() != 0)
+        {
+
+            myColor.colorData.ChangeColor((int)myColor.colorData.currentSpec + ((ctx.ReadValue<float>() > 0) ? 1 : -1));
+            renderer.color = myColor.colorData.GetColor(myColor.colorData.currentSpec);
+            paints.SetIndex((int)myColor.colorData.currentSpec);
+        }
     }
 
-    
+
 }

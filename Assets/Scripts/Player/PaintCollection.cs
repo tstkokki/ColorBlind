@@ -6,7 +6,7 @@ using UnityEngine;
 public class PaintCollection : ScriptableObject
 {
     public List<PaintAmount_SO> paints = new List<PaintAmount_SO>();
-
+    public int currentIndex;
     /// <summary>
     /// Get the amount of paint of color by index
     /// <para>0 = White, 1 = Red, 2 = Green, 3 = Blue</para>
@@ -15,11 +15,20 @@ public class PaintCollection : ScriptableObject
     /// <returns></returns>
     public int Get(int i)
     {
-        if(i < paints.Count && i >= 0)
+        if (i < paints.Count && i >= 0)
         {
             return paints[i].GetAmount;
         }
         return 0;
+    }
+
+    public void SetIndex(int i)
+    {
+        if (i < paints.Count && i >= 0)
+        {
+            currentIndex = i;
+        }
+
     }
 
     /// <summary>
