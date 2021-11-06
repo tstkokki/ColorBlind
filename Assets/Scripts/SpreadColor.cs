@@ -18,7 +18,7 @@ public class SpreadColor : MonoBehaviour
         block = new MaterialPropertyBlock();
         rend = GetComponent<SpriteRenderer>();
         transition = 0.0001f;
-        StartCoroutine("Fade", col);
+        StartCoroutine(Fade(col));
     }
 
     IEnumerator Fade(Color color)
