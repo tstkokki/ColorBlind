@@ -763,7 +763,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50, y: 20, z: 5}
+  m_Size: {x: 50, y: 20, z: 30}
   m_Center: {x: 0, y: -10, z: 0}
 --- !u!4 &797870460
 Transform:
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 1639009232}
   - component: {fileID: 1639009231}
   m_Layer: 6
-  m_Name: Cube
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1503,5 +1503,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2569424254284130845, guid: 211e969b30336da49bc8274046fcf37a, type: 3}
+      propertyPath: startPos
+      value: 
+      objectReference: {fileID: 1639009234}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211e969b30336da49bc8274046fcf37a, type: 3}

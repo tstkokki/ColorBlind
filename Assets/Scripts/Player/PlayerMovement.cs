@@ -72,7 +72,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Killzone"))
         {
-            transform.position = startPos;
+            direction = Vector3.zero;
+        controller.enabled = false;
+        transform.position = startPos + Vector3.up;
+        controller.enabled = true;
+            //StartCoroutine(Respawn(4));
         }
     }
+
+    //IEnumerator Respawn(int asjdhl)
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //}
 }
