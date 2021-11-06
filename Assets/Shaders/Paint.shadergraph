@@ -1564,7 +1564,7 @@
     "m_Guid": {
         "m_GuidSerialized": "0c5f8c14-924d-4056-ba71-28d404bb10bd"
     },
-    "m_Name": "Texture",
+    "m_Name": "_MainTex",
     "m_DefaultReferenceName": "Texture2D_d80fd350a2d34015b98f8afe3f2ca028",
     "m_OverrideReferenceName": "_MainTex",
     "m_GeneratePropertyBlock": true,

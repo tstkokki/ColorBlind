@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6109141014135207276
+--- !u!114 &-1881586436941721829
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21,29 +21,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Paint
-  m_Shader: {fileID: -6465566751694194690, guid: 4ad4e4f32c0ffa148bfe8e6820ebcb7b, type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_73613da37cd9466ba330572df3adb530:
-        m_Texture: {fileID: 2800000, guid: 9dadd5ba1af775042ae9f2e8cfcdd5cc, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_7809601fc68b443ea34e07d95d30936c:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_d80fd350a2d34015b98f8afe3f2ca028:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -69,7 +58,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9dadd5ba1af775042ae9f2e8cfcdd5cc, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -101,10 +90,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_18ef1f093643482ab4c4e76ac5067c39: 0
-    - Vector1_2ebf060115664e36a19afeba96c7167a: 1
-    - Vector1_a0d1bb484e0f4077869c109b738abc9c: 0
-    - Vector1_ea2042b7750a4535b67205fb21b9be85: 0.06
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -132,10 +117,6 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_a8ff39bc900b41518e42d17acdce5ab0: {r: 1, g: 0, b: 0, a: 0}
-    - Color_aa25779d7f8546f6b392ab133bcdcfde: {r: 1, g: 0, b: 0, a: 0}
-    - Color_c17cc2c80d1e4fea8c81c5aad3d7033c: {r: 0, g: 0, b: 0, a: 0}
-    - Color_f0340217f6814c10a983c1340cced8f6: {r: 1, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
