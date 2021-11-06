@@ -9,6 +9,7 @@ public class PlayerAimShoot : MonoBehaviour
     [SerializeField] Transform barrel;
     [SerializeField] Camera cam;
     Vector3 aim;
+    int cost = 10;
     [SerializeField] PaintCollection paints;
     [SerializeField] GameObject projectile;
     [SerializeField] ColorData_SO myColor;
@@ -27,7 +28,7 @@ public class PlayerAimShoot : MonoBehaviour
             if (paints.Get((int)myColor.colorData.currentSpec) > 0)
             {
                 Instantiate(projectile, barrel.position, arm.rotation);
-                paints.Increment((int)myColor.colorData.currentSpec);
+                paints.Increment((int)myColor.colorData.currentSpec, -cost);
             }
         }
     }
