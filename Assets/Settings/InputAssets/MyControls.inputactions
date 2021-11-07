@@ -241,6 +241,17 @@
                 },
                 {
                     "name": "",
+                    "id": "961fdb01-63af-43a5-a91f-18fc9704118f",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1136d962-4c7a-4630-a134-ad56a3e7ccc2",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
