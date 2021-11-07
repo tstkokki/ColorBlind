@@ -14,6 +14,9 @@ public class PlayerAimShoot : MonoBehaviour
     [SerializeField] GameObject projectile;
     [SerializeField] ColorData_SO myColor;
     [SerializeField] SpriteRenderer renderer;
+    public AudioClip shootSound;
+    public AudioClip noAmmoSound;
+
     public void Aim(InputAction.CallbackContext ctx)
     {
         float angle = Mathf.Atan2(ctx.ReadValue<Vector2>().y, ctx.ReadValue<Vector2>().x) * Mathf.Rad2Deg;
@@ -29,7 +32,10 @@ public class PlayerAimShoot : MonoBehaviour
             {
                 Instantiate(projectile, barrel.position, arm.rotation);
                 paints.Increment((int)myColor.colorData.currentSpec, -cost);
+                GetComponent<AudioSource>().PlayOneShot(shootSound);
             }
+            else
+                GetComponent<AudioSource>().PlayOneShot(noAmmoSound);
         }
     }
 
