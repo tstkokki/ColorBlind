@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1294294229258789535}
   - component: {fileID: 1294294229258789523}
   - component: {fileID: 1294294229258789532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
   RespawnPlayer: {fileID: 11400000, guid: cda9fae6e02ebd4428492c2b25cdcc0d, type: 2}
   _mySpec: 0
+  _sounds: {fileID: 11400000, guid: db6de172dfaf11949999cc93fd600bf3, type: 2}
   jumpPower: 1
   groundLayer:
     serializedVersion: 2

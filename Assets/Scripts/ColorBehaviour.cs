@@ -31,8 +31,14 @@ public class ColorBehaviour : MonoBehaviour
         {
 
             _mySpec = _spec;
-            renderer.color = _colorData.colorData.GetColor(_mySpec);
-            ColorResponse();
+            Color col =
+            _colorData.colorData.GetColor(_mySpec);
+            if (col != null)
+            {
+
+                renderer.color = col;
+                ColorResponse();
+            }
         }
     }
 
@@ -68,10 +74,10 @@ public class ColorBehaviour : MonoBehaviour
                 time += Time.deltaTime;
                 transform.position = new Vector3(startPos.x + 1 * Mathf.Sin(time * 1.5f) * 2, transform.position.y, 0);
                 break;
-            //case ColorSpectrum.ColorSpec.Red:
-            //time += Time.deltaTime;
-            //transform.position = new Vector3(transform.position.x, startPos.y + 1 * Mathf.Sin(time * 1.5f) * 2, 0);
-            //break;
+            case ColorSpectrum.ColorSpec.Red:
+                time += Time.deltaTime;
+                transform.position = new Vector3(transform.position.x, startPos.y + 1 * Mathf.Sin(time * 1.5f) * 2, 0);
+                break;
             default:
                 break;
         }

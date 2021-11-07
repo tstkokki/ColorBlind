@@ -8,11 +8,16 @@ public class PaintBucket : MonoBehaviour
     public int paintAmount;
     public float floatSpeed;
     public float floatAmount;
+    Vector3 startPos;
 
+    void Start()
+    {
+        startPos = transform.position;
+    }
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(Time.time * floatSpeed) * floatAmount);
+        transform.position = new Vector3(startPos.x, startPos.y + Mathf.Sin(Time.time * floatSpeed) * floatAmount);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -25,7 +25,7 @@ public class LevelTransition : MonoBehaviour
             nextLevel.SetActive(true);
 
             Instantiate(bigSmoke, transform.position, bigSmoke.transform.rotation);
-            movePlayer.Raise();
+            //movePlayer.Raise();
             levelTransition.Raise();
         }
     }

@@ -21,6 +21,7 @@ public class FlyerOC : ColorBehaviour
     // Start is called before the first frame update
     protected void Start()
     {
+        base.Start();
         goombaRB = GetComponent<Rigidbody>();
         startPos2 = transform.position;
         player = GameObject.FindWithTag("Player");
@@ -42,7 +43,7 @@ public class FlyerOC : ColorBehaviour
                 {
                     hasTriggered = true;
                     startPos = transform.position;
-                }                           
+                }
                 time += Time.deltaTime;
                 transform.position = startPos + Vector3.right * Mathf.Sin(time * 1.5f) * 2;
 
@@ -55,7 +56,7 @@ public class FlyerOC : ColorBehaviour
                 hasTriggered = false;
                 goombaRB.useGravity = false;
 
-                if(!hasTriggered2)
+                if (!hasTriggered2)
                 {
                     hasTriggered2 = true;
                     startPos2 = transform.position;
