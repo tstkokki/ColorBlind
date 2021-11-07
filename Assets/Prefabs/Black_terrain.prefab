@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 11400000, guid: cda9fae6e02ebd4428492c2b25cdcc0d, type: 2}
   _mySpec: 6
 --- !u!114 &2267731447608256802
 MonoBehaviour:
