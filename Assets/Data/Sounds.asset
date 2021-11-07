@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02bc8e0823239004a9e139b2eae6f591, type: 3}
   m_Name: Sounds
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: b5608a2f789ba004eb8c8876b227f24f, type: 3}
+  - {fileID: 8300000, guid: 18a428359738eff408cc36252485de30, type: 3}
+  - {fileID: 8300000, guid: b6a206e323a712c41906cf79b6d5e382, type: 3}
+  - {fileID: 8300000, guid: 4773b06eb03b95f459785963a2bd5bff, type: 3}
+  - {fileID: 8300000, guid: 9f792025055840941874350117797142, type: 3}
   source: {fileID: 0}

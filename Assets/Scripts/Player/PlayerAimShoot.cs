@@ -14,8 +14,7 @@ public class PlayerAimShoot : MonoBehaviour
     [SerializeField] GameObject projectile;
     [SerializeField] ColorData_SO myColor;
     [SerializeField] SpriteRenderer renderer;
-    public AudioClip shootSound;
-    public AudioClip noAmmoSound;
+    [SerializeField] Sounds_SO _sounds;
 
     public void Aim(InputAction.CallbackContext ctx)
     {
@@ -32,10 +31,10 @@ public class PlayerAimShoot : MonoBehaviour
             {
                 Instantiate(projectile, barrel.position, arm.rotation);
                 paints.Increment((int)myColor.colorData.currentSpec, -cost);
-                GetComponent<AudioSource>().PlayOneShot(shootSound);
+                _sounds.PlayFromList(4);
             }
             else
-                GetComponent<AudioSource>().PlayOneShot(noAmmoSound);
+                _sounds.PlayFromList(3);
         }
     }
 

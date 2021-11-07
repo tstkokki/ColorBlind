@@ -26,15 +26,15 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     [SerializeField] SpriteRenderer renderer;
     [SerializeField] ParticleSystem deathSplat;
+    [SerializeField] Sounds_SO _sounds;
 
-    private AudioSource audioS;
-    public AudioClip jumpSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
         startPos.Set(transform.position);
         controller = GetComponent<CharacterController>();
-        audioS = GetComponent<AudioSource>();
     }
 
 
@@ -85,7 +85,8 @@ public class PlayerMovement : MonoBehaviour
         {
             direction.y = Mathf.Sqrt(jumpForce * -2f * gravity);
             anim.SetBool("Grounded", false);
-            audioS.PlayOneShot(jumpSound);
+            _sounds.PlayFromList(1);
+
             //jumpCount--;
         }
     }

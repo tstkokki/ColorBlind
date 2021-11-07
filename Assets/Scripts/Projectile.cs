@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] LayerMask effectLayer;
     [SerializeField] ColorData_SO colorData;
     [SerializeField] SpriteRenderer renderer;
+    [SerializeField] Sounds_SO _sounds;
     ColorSpectrum.ColorSpec _mySpec;
     // Start is called before the first frame update
     void Start()
@@ -45,7 +46,7 @@ public class Projectile : MonoBehaviour
             //set the color behaviour of the target
             ColorBehaviour _other = collision.gameObject.GetComponent<ColorBehaviour>();
             if (_other != null) _other.ChangeColor(_mySpec);
-
+            _sounds.PlayFromList(0);
             Destroy(gameObject);
         }
     }
