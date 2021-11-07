@@ -8,6 +8,7 @@ public class ColorBehaviour : MonoBehaviour
     protected SpriteRenderer renderer;
     [SerializeField] GameEvent RespawnPlayer;
     [SerializeField] protected ColorSpectrum.ColorSpec _mySpec;
+    [SerializeField] Sounds_SO _sounds;
 
     protected Vector3 startPos;
     protected float time = 0;
@@ -80,6 +81,7 @@ public class ColorBehaviour : MonoBehaviour
 
             if (_mySpec == ColorSpectrum.ColorSpec.Black && other.gameObject.CompareTag("Player"))
             {
+                _sounds.PlayFromList(5);
                 RespawnPlayer.Raise();
             }
         }
