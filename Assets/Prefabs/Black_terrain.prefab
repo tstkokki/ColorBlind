@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2267731447608256801}
   - component: {fileID: 2267731447608256800}
   - component: {fileID: 2267731447608256807}
-  - component: {fileID: 2267731447608256806}
   - component: {fileID: 2267731447608256802}
   m_Layer: 6
   m_Name: Black_terrain
@@ -98,22 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2267731447608256806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267731447608256805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc8b1e3debd9014438b9203563881597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
-  RespawnPlayer: {fileID: 11400000, guid: cda9fae6e02ebd4428492c2b25cdcc0d, type: 2}
-  _mySpec: 6
-  _sounds: {fileID: 11400000, guid: db6de172dfaf11949999cc93fd600bf3, type: 2}
 --- !u!114 &2267731447608256802
 MonoBehaviour:
   m_ObjectHideFlags: 0
