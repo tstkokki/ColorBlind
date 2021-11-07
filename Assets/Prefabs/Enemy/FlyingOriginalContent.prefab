@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1079468201761393987}
   - component: {fileID: 1079468201761393996}
   - component: {fileID: 3652899335291247031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlyingOriginalContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +129,7 @@ MonoBehaviour:
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
   RespawnPlayer: {fileID: 11400000, guid: cda9fae6e02ebd4428492c2b25cdcc0d, type: 2}
   _mySpec: 0
+  _sounds: {fileID: 11400000, guid: db6de172dfaf11949999cc93fd600bf3, type: 2}
   jumpPower: 0.5
   player: {fileID: 0}
   target: {fileID: 0}

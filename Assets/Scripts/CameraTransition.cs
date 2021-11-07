@@ -11,6 +11,6 @@ public class CameraTransition : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, cameraPoint.Get(), 5 * Time.deltaTime); 
+        transform.position = Vector3.MoveTowards(transform.position, cameraPoint.Get(), 10 * Time.deltaTime); 
     }
 }

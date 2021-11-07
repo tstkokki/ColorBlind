@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed = 5;
     [SerializeField] float gravity = -9.81f;
     [SerializeField] float radius = 0.3f;
-    //int jumpCount = 0;
-    //int maxJumps = 1;
+    int jumpCount = 0;
+    int maxJumps = 1;
     [SerializeField] Animator anim;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask enemyLayer;
@@ -60,11 +60,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 direction.y = 0;
             }
-            
-            //if (jumpCount < maxJumps)
-            //{
-            //    jumpCount = maxJumps;
-            //}
+
+            if (jumpCount < maxJumps && direction.y <= 0.1f)
+            {
+                jumpCount = maxJumps;
+            }
         }
         if (direction.x < 0.1 && direction.x > -0.1 || !isGrounded)
         {
@@ -81,13 +81,13 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext ctx)
     {
         //if player is grounded and input is performed
-        if (isGrounded && ctx.performed)
+        if (ctx.performed && jumpCount > 0)
         {
             direction.y = Mathf.Sqrt(jumpForce * -2f * gravity);
             anim.SetBool("Grounded", false);
             _sounds.PlayFromList(1);
 
-            //jumpCount--;
+            jumpCount--;
         }
     }
 

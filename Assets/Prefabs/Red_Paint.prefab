@@ -4932,4 +4932,4 @@ MonoBehaviour:
   paint: {fileID: 11400000, guid: 981349e1e3d5e244d9ebe8bf2b600821, type: 2}
   paintAmount: 30
   floatSpeed: 2
-  floatAmount: 0.00075
+  floatAmount: 0.1
