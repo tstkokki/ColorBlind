@@ -20,4 +20,13 @@ public class PaintAmount_SO : ScriptableObject
     {
         get => Amount;
     }
+
+    private void OnEnable()
+    {
+        Amount = 0;
+    }
+    private void OnDisable()
+    {
+        Amount = 0;
+    }
 }
