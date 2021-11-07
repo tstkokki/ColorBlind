@@ -433,6 +433,7 @@ MonoBehaviour:
   groundCheck: {fileID: 903636905505034624}
   renderer: {fileID: 2569424252568362893}
   deathSplat: {fileID: 331088549253688286, guid: 3e8fb6417743ca34980c4cb242016a31, type: 3}
+  _sounds: {fileID: 11400000, guid: db6de172dfaf11949999cc93fd600bf3, type: 2}
 --- !u!114 &5017588677407091605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +453,7 @@ MonoBehaviour:
   projectile: {fileID: 1394322688882820820, guid: 18a05c4300c20b04cb2b80630544abe6, type: 3}
   myColor: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
   renderer: {fileID: 2569424252780503090}
+  _sounds: {fileID: 11400000, guid: db6de172dfaf11949999cc93fd600bf3, type: 2}
 --- !u!114 &2569424254284130847
 MonoBehaviour:
   m_ObjectHideFlags: 0
