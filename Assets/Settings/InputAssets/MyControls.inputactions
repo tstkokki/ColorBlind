@@ -60,6 +60,30 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Color1",
+                    "type": "Button",
+                    "id": "ebb899a2-b40b-4f30-95d8-c5308e24bca8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Color2",
+                    "type": "Button",
+                    "id": "ca4a93aa-d779-4c8d-ac46-0d818aca2030",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Color4",
+                    "type": "Button",
+                    "id": "da9735d9-8188-4e6c-b74d-190a49b70a20",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -197,6 +221,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d0b85274-86b5-4c34-bec7-760198a959fa",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "71ca7d17-995b-4d24-9e9c-71c06cff8b8c",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -242,7 +277,7 @@
                 {
                     "name": "",
                     "id": "961fdb01-63af-43a5-a91f-18fc9704118f",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -484,11 +519,44 @@
                 {
                     "name": "",
                     "id": "62da033d-4dc0-4706-b378-2ec11b17c974",
-                    "path": "<Keyboard>/f1",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Color0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60fddcca-0c78-4837-9600-c8e893c80ae9",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Color1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dcc75b9b-8018-423c-88c8-d0d73bf86516",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Color2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c39349e-57c1-4e93-b5f0-554d1ef07fe1",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Color4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
