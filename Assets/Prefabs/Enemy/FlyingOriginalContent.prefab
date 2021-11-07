@@ -126,7 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291dc071683dc9f4dacf017dcf889f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _colorData: {fileID: 0}
+  _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 11400000, guid: cda9fae6e02ebd4428492c2b25cdcc0d, type: 2}
   _mySpec: 0
   jumpPower: 0.5
   player: {fileID: 0}
