@@ -16,13 +16,16 @@ public class PlayerMovement : MonoBehaviour
     //int maxJumps = 1;
     [SerializeField] Animator anim;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask enemyLayer;
+
     [SerializeField] Transform topCheck;
     [SerializeField] Transform groundCheck;
-    [SerializeField] Transform groundCheck2;
+    //[SerializeField] Transform groundCheck2;
     CharacterController controller;
     Vector3 direction = Vector3.zero;
     bool isGrounded;
     [SerializeField] SpriteRenderer renderer;
+    [SerializeField] ParticleSystem deathSplat;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         //check if either foot is touching the ground
         isGrounded =
             Physics.CheckSphere(groundCheck.position, radius, groundLayer)
-            || Physics.CheckSphere(groundCheck2.position, radius, groundLayer);
+            || Physics.CheckSphere(groundCheck.position, radius, enemyLayer);
 
         anim.SetBool("Grounded", isGrounded);
 
@@ -95,15 +98,27 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    public void Respawn()
+    {
+
+        Instantiate(deathSplat, transform.position, transform.rotation);
+        direction = Vector3.zero;
+        controller.enabled = false;
+        transform.position = startPos.Get() + Vector3.up;
+        controller.enabled = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Killzone"))
+        if (other.gameObject.CompareTag("Killzone") || other.gameObject.CompareTag("Enemy"))
         {
-            direction = Vector3.zero;
-            controller.enabled = false;
-            transform.position =  startPos.Get() + Vector3.up;
-            controller.enabled = true;
+            Respawn();
         }
     }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Debug.Log(hit.gameObject.name);
+    }
 }
