@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8891357193477524672}
   m_Layer: 1
   m_Name: PaintProjectile
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
