@@ -27,9 +27,13 @@ public class ColorBehaviour : MonoBehaviour
 
     public void ChangeColor(ColorSpectrum.ColorSpec _spec)
     {
-        _mySpec = _spec;
-        renderer.color = _colorData.colorData.GetColor(_mySpec);
-        ColorResponse();
+        if (_mySpec != ColorSpectrum.ColorSpec.Black)
+        {
+
+            _mySpec = _spec;
+            renderer.color = _colorData.colorData.GetColor(_mySpec);
+            ColorResponse();
+        }
     }
 
     public void ChangeColor(Color _color)
