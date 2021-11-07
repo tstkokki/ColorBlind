@@ -6,10 +6,9 @@ public class FlyerOC : ColorBehaviour
 {
     public float jumpPower = 0.5f;
     Rigidbody goombaRB;
-    float time = 0f;
     float time2 = 0f;
     private bool isJumping = false;
-    Vector3 startPos, startPos2;
+    Vector3 startPos2;
 
     string baseTag;
 
@@ -20,22 +19,15 @@ public class FlyerOC : ColorBehaviour
 
     [SerializeField] GameObject target;
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         goombaRB = GetComponent<Rigidbody>();
-        startPos = transform.position;
         startPos2 = transform.position;
         player = GameObject.FindWithTag("Player");
         baseTag = gameObject.tag;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        //goombaRB.velocity = new Vector2(speed, goombaRB.velocity.y);
-
-        
-    }
+    
 
     protected override void Behaviours()
     {

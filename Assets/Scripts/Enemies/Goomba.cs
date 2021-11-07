@@ -6,94 +6,55 @@ public class Goomba : ColorBehaviour
 {
     public float jumpPower = 0.5f;
     Rigidbody goombaRB;
-    float time = 0f;
-    private bool isJumping = false;
-    Vector3 startPos;
 
     bool hasTriggered = false;
+    [SerializeField] LayerMask groundLayer;
 
-    public GameObject player;
-
-    [SerializeField] GameObject target;
     // Start is called before the first frame update
-    void Start()
+    override protected void Start()
     {
         goombaRB = GetComponent<Rigidbody>();
-        startPos = transform.position;
-        player = GameObject.FindWithTag("Player");
+        base.Start();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    protected override void ColorResponse()
     {
-        //goombaRB.velocity = new Vector2(speed, goombaRB.velocity.y);
-
-        
-    }
-
-    protected override void Behaviours()
-    {
-        //base.Behaviours();
+        base.ColorResponse();
         switch (_mySpec)
         {
             case ColorSpectrum.ColorSpec.Green:
-                Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-                if (!hasTriggered)
-                {
-                    hasTriggered = true;
-                    startPos = transform.position;
-                }                           
-                time += Time.deltaTime;
-                transform.position = startPos + Vector3.right * Mathf.Sin(time * 1.5f) * 2;
+                goombaRB.isKinematic = true;
                 break;
-
-            case ColorSpectrum.ColorSpec.Red:
-                Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-                hasTriggered = false;
-                goombaRB.useGravity = true;
-
-                if (goombaRB.velocity.magnitude > 0)
-                {
-                    isJumping = true;
-                }
-                else
-                {
-                    isJumping = false;
-                }
-                if(!isJumping)
-                {
-                    goombaRB.AddForce(new Vector3(0, jumpPower, 0), ForceMode.Impulse);
-                }
-                time = 0f;
-                break;
-
-            case ColorSpectrum.ColorSpec.Blue:
-                hasTriggered = false;
-                Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
-                goombaRB.velocity = new Vector3(0, 0, 0);
-                goombaRB.useGravity = false;
-                transform.position = transform.position;
-                time = 0f;
-                break;
-
-            case ColorSpectrum.ColorSpec.White:
-                hasTriggered = false;
-                goombaRB.useGravity = true;
-                Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), true);
-                time = 0f;
-                break;
-
             case ColorSpectrum.ColorSpec.Black:
-                Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), false);
                 gameObject.tag = "Killzone";
+                goombaRB.isKinematic = false;
+                break;
+            default:
+                goombaRB.isKinematic = false;
+                gameObject.tag = "Enemy";
+                break;
+        }
+    }
 
-
+    //called every late update
+    protected override void Behaviours()
+    {
+        base.Behaviours();
+        switch (_mySpec)
+        {
+            case ColorSpectrum.ColorSpec.Red:
+                bool isGrounded = Physics.CheckSphere(transform.position, 1, groundLayer);
+                if (isGrounded)
+                {
+                    goombaRB.AddForce(Vector3.up*10);
+                }
                 break;
 
             default:
                 break;
         }
 
+        
     }
 
 }
