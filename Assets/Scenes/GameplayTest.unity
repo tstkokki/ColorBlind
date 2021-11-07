@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 0}
   _mySpec: 0
 --- !u!1 &597190090
 GameObject:
@@ -671,6 +672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 0}
   _mySpec: 3
 --- !u!65 &597190092
 BoxCollider:
@@ -860,6 +862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 0}
   _mySpec: 0
 --- !u!1 &659970680
 GameObject:
@@ -971,7 +974,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 0}
   _mySpec: 3
+--- !u!1 &706302236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 706302237}
+  m_Layer: 0
+  m_Name: FinalGoal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &706302237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706302236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &825720337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 0}
   _mySpec: 3
 --- !u!65 &825720339
 BoxCollider:
@@ -1186,6 +1221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 0}
   _mySpec: 3
 --- !u!65 &1287215394
 BoxCollider:
@@ -1375,6 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 0}
   _mySpec: 0
 --- !u!1001 &1559925550
 PrefabInstance:
@@ -1602,6 +1639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorData: {fileID: 11400000, guid: 36becca45d1516047b634f2aed00f058, type: 2}
+  RespawnPlayer: {fileID: 0}
   _mySpec: 0
 --- !u!65 &1993919549
 BoxCollider:
