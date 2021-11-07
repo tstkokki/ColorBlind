@@ -5,10 +5,16 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] Transform target;
+    Camera cam;
 
+    private void Start()
+    {
+        cam = GetComponent<Camera>();
+    }
     private void LateUpdate()
     {
         transform.position = Vector3.Lerp(transform.position, Target(), 0.2f);
+        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 20, 0.4f * Time.deltaTime);
     }
 
     Vector3 Target()
