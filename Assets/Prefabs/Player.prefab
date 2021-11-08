@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5888085976311867916}
   - component: {fileID: 6013810502955213872}
-  - component: {fileID: 7348872597992603863}
   - component: {fileID: 731176278}
   m_Layer: 7
   m_Name: GroundCheck (1)
@@ -18,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5888085976311867916
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234247570460322618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -0.33, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2569424254284130844}
@@ -45,19 +44,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2
-  m_Center: {x: 0, y: -0.08, z: 0}
---- !u!114 &7348872597992603863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234247570460322618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13adcc187ba76aa45adf8b4aa0d13f70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &731176278
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -399,13 +386,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 0.8
-  m_Radius: 0.28
+  m_Height: 0.75
+  m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!114 &2569424254284130845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +419,7 @@ MonoBehaviour:
     m_Bits: 256
   topCheck: {fileID: 8431870916807103826}
   groundCheck: {fileID: 903636905505034624}
+  groundCheck2: {fileID: 5888085976311867916}
   renderer: {fileID: 2569424252568362893}
   deathSplat: {fileID: 331088549253688286, guid: 3e8fb6417743ca34980c4cb242016a31, type: 3}
   _sounds: {fileID: 11400000, guid: db6de172dfaf11949999cc93fd600bf3, type: 2}
@@ -545,7 +533,31 @@ MonoBehaviour:
     m_ActionId: 22c9e0ea-2dd9-4777-bcae-ce9e26bdbe65
     m_ActionName: Platformer/Aim
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_ActionId: b3eb760b-b9f3-4e43-bc97-6bfcbee41f97
     m_ActionName: Platformer/Pause[/Keyboard/escape]
   - m_PersistentCalls:
@@ -568,6 +580,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 2095e6b8-8c90-4675-af39-6a537ab1a5db
     m_ActionName: Platformer/Color0[/Keyboard/f1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ebb899a2-b40b-4f30-95d8-c5308e24bca8
+    m_ActionName: Platformer/Color1[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ca4a93aa-d779-4c8d-ac46-0d818aca2030
+    m_ActionName: Platformer/Color2[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: da9735d9-8188-4e6c-b74d-190a49b70a20
+    m_ActionName: Platformer/Color4[/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Platformer
@@ -639,7 +663,6 @@ GameObject:
   m_Component:
   - component: {fileID: 903636905505034624}
   - component: {fileID: 7436058232730426396}
-  - component: {fileID: 1753442888186971730}
   - component: {fileID: 1098358691}
   m_Layer: 7
   m_Name: GroundCheck
@@ -656,7 +679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2636639085125768122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.33, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2425, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2569424254284130844}
@@ -674,19 +697,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2
-  m_Center: {x: 0, y: -0.08, z: 0}
---- !u!114 &1753442888186971730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2636639085125768122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13adcc187ba76aa45adf8b4aa0d13f70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1098358691
 Rigidbody:
   m_ObjectHideFlags: 0

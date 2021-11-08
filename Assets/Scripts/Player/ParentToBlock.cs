@@ -9,10 +9,11 @@ public class ParentToBlock : MonoBehaviour
     {
         if (other.CompareTag("Ground"))
         {
-            if (other.transform != transform.parent.parent)
-            {
-                transform.parent.parent = other.transform;
-            }
+
+            //if (other.transform != transform.parent.parent)
+            //{
+            //    transform.parent.parent = other.transform;
+            //}
         }
     }
 

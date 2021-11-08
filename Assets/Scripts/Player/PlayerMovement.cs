@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
 using UniRx;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,13 +19,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask enemyLayer;
-
+    
     [SerializeField] Transform topCheck;
     [SerializeField] Transform groundCheck;
-    //[SerializeField] Transform groundCheck2;
+    [SerializeField] Transform groundCheck2;
     CharacterController controller;
     Vector3 direction = Vector3.zero;
     bool isGrounded;
+    bool animIsGrounded;
     [SerializeField] SpriteRenderer renderer;
     [SerializeField] ParticleSystem deathSplat;
     [SerializeField] Sounds_SO _sounds;
@@ -46,7 +49,11 @@ public class PlayerMovement : MonoBehaviour
             Physics.CheckSphere(groundCheck.position, radius, groundLayer)
             || Physics.CheckSphere(groundCheck.position, radius, enemyLayer);
 
-        anim.SetBool("Grounded", isGrounded);
+        animIsGrounded =
+            Physics.CheckSphere(groundCheck2.position, radius, groundLayer)
+            || Physics.CheckSphere(groundCheck2.position, radius, enemyLayer);
+
+        anim.SetBool("Grounded", animIsGrounded);
 
         //if player is in the air, apply gravity
         if (!isGrounded)
@@ -56,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+
             if (direction.y < 0)
             {
                 direction.y = 0;
@@ -66,16 +74,32 @@ public class PlayerMovement : MonoBehaviour
                 jumpCount = maxJumps;
             }
         }
-        if (direction.x < 0.1 && direction.x > -0.1 || !isGrounded)
-        {
-            anim.SetBool("Walking", false);
-        }
-        else
-        {
-            anim.SetBool("Walking", true);
-        }
+        
         if(direction.x > 0 || direction.x < 0 || direction.y > 0 || direction.y < 0)
             controller.Move(direction * Time.deltaTime);
+    }
+
+    void LateUpdate()
+    {
+        if (animIsGrounded)
+        {
+            try
+            {
+                Vector3 outside = Vector3.zero;
+                Collider coll = Physics.OverlapSphere(groundCheck2.position, radius, groundLayer)[0];
+                if (coll != null)
+                {
+                    outside.y = coll.gameObject.GetComponent<ColorBehaviour>().movementY;
+                    outside.x = coll.gameObject.GetComponent<ColorBehaviour>().movementX;
+                }
+                if (outside.x > 0 || outside.x < 0 || outside.y > 0 || outside.y < 0)
+                    controller.Move(outside);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e.Message);
+            }
+        }
     }
 
     public void Jump(InputAction.CallbackContext ctx)
@@ -94,7 +118,15 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         direction.x = ctx.ReadValue<float>() * speed;
-        if(direction.x > 0 && renderer.flipX)
+        if (direction.x < 0.1 && direction.x > -0.1 || !isGrounded)
+        {
+            anim.SetBool("Walking", false);
+        }
+        else
+        {
+            anim.SetBool("Walking", true);
+        }
+        if (direction.x > 0 && renderer.flipX)
         {
             renderer.flipX = false;
         }

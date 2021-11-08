@@ -9,6 +9,8 @@ public class ColorBehaviour : MonoBehaviour
     [SerializeField] GameEvent RespawnPlayer;
     [SerializeField] protected ColorSpectrum.ColorSpec _mySpec;
     [SerializeField] Sounds_SO _sounds;
+    public float movementX;
+    public float movementY;
 
     protected Vector3 startPos;
     protected float time = 0;
@@ -30,12 +32,25 @@ public class ColorBehaviour : MonoBehaviour
         if (_mySpec != ColorSpectrum.ColorSpec.Black)
         {
 
+            switch (_mySpec)
+            {
+                case ColorSpectrum.ColorSpec.Red:
+                    movementY = 0;
+                    break;
+
+                case ColorSpectrum.ColorSpec.Green:
+                    movementX = 0;
+                    break;
+
+                default:
+                    break;
+            }
+
             _mySpec = _spec;
             Color col =
             _colorData.colorData.GetColor(_mySpec);
             if (col != null)
             {
-
                 renderer.color = col;
                 ColorResponse();
             }
@@ -72,10 +87,12 @@ public class ColorBehaviour : MonoBehaviour
                 //origin.x + Mathf.Sin(Time.time * speed) * amount,
                 //transform.localPosition.y, transform.localPosition.z);
                 time += Time.deltaTime;
+                movementX = (startPos.x + 1 * Mathf.Sin(time * 1.5f) * 2) - transform.position.x;
                 transform.position = new Vector3(startPos.x + 1 * Mathf.Sin(time * 1.5f) * 2, transform.position.y, 0);
                 break;
             case ColorSpectrum.ColorSpec.Red:
                 time += Time.deltaTime;
+                movementY = (startPos.y + 1 * Mathf.Sin(time * 1.5f) * 2) - transform.position.y;
                 transform.position = new Vector3(transform.position.x, startPos.y + 1 * Mathf.Sin(time * 1.5f) * 2, 0);
                 break;
             default:
