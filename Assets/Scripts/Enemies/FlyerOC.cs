@@ -44,8 +44,8 @@ public class FlyerOC : ColorBehaviour
                     hasTriggered = true;
                     startPos = transform.position;
                 }
-                time += Time.deltaTime;
-                transform.position = startPos + Vector3.right * Mathf.Sin(time * 1.5f) * 2;
+                timeX += Time.deltaTime;
+                transform.position = startPos + Vector3.right * Mathf.Sin(timeX * 1.5f) * 2;
 
                 time2 = 0f;
                 break;
@@ -64,7 +64,7 @@ public class FlyerOC : ColorBehaviour
                 time2 += Time.deltaTime;
                 transform.position = startPos2 + Vector3.up * Mathf.Sin(time2 * 1.5f) * 2;
 
-                time = 0f;
+                timeX = 0f;
                 break;
 
             case ColorSpectrum.ColorSpec.Blue:
@@ -75,7 +75,7 @@ public class FlyerOC : ColorBehaviour
                 goombaRB.velocity = new Vector3(0, 0, 0);
                 goombaRB.useGravity = false;
                 transform.position = transform.position;
-                time = 0f;
+                timeX = 0f;
                 time2 = 0f;
                 break;
 
@@ -85,7 +85,7 @@ public class FlyerOC : ColorBehaviour
                 hasTriggered = false;
                 goombaRB.useGravity = false;
                 Physics.IgnoreCollision(GetComponent<Collider>(), player.GetComponent<Collider>(), true);
-                time = 0f;
+                timeX = 0f;
                 time2 = 0f;
                 break;
 

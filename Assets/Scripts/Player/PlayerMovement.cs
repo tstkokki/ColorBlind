@@ -63,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-
             if (direction.y < 0)
             {
                 direction.y = 0;
@@ -79,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(direction * Time.deltaTime);
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         if (animIsGrounded)
         {
@@ -97,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
             }
             catch (Exception e)
             {
-                Debug.Log(e.Message);
+
             }
         }
     }
@@ -118,14 +117,15 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         direction.x = ctx.ReadValue<float>() * speed;
-        if (direction.x < 0.1 && direction.x > -0.1 || !isGrounded)
-        {
-            anim.SetBool("Walking", false);
-        }
-        else
+        if ((direction.x > 0 || direction.x < 0) && isGrounded)
         {
             anim.SetBool("Walking", true);
         }
+        else
+        {
+            anim.SetBool("Walking", false);
+        }
+
         if (direction.x > 0 && renderer.flipX)
         {
             renderer.flipX = false;

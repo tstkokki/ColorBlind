@@ -13,7 +13,8 @@ public class ColorBehaviour : MonoBehaviour
     public float movementY;
 
     protected Vector3 startPos;
-    protected float time = 0;
+    protected float timeX = 0;
+    protected float timeY = 0;
     // Start is called before the first frame update
     virtual protected void Start()
     {
@@ -86,14 +87,14 @@ public class ColorBehaviour : MonoBehaviour
             case ColorSpectrum.ColorSpec.Green:
                 //origin.x + Mathf.Sin(Time.time * speed) * amount,
                 //transform.localPosition.y, transform.localPosition.z);
-                time += Time.deltaTime;
-                movementX = (startPos.x + 1 * Mathf.Sin(time * 1.5f) * 2) - transform.position.x;
-                transform.position = new Vector3(startPos.x + 1 * Mathf.Sin(time * 1.5f) * 2, transform.position.y, 0);
+                timeX += Time.deltaTime;
+                movementX = (startPos.x + 1 * Mathf.Sin(timeX * 1.5f) * 2) - transform.position.x;
+                transform.position = new Vector3(startPos.x + 1 * Mathf.Sin(timeX * 1.5f) * 2, transform.position.y, 0);
                 break;
             case ColorSpectrum.ColorSpec.Red:
-                time += Time.deltaTime;
-                movementY = (startPos.y + 1 * Mathf.Sin(time * 1.5f) * 2) - transform.position.y;
-                transform.position = new Vector3(transform.position.x, startPos.y + 1 * Mathf.Sin(time * 1.5f) * 2, 0);
+                timeY += Time.deltaTime;
+                movementY = (startPos.y + 1 * Mathf.Sin(timeY * 1.5f) * 2) - transform.position.y;
+                transform.position = new Vector3(transform.position.x, startPos.y + 1 * Mathf.Sin(timeY * 1.5f) * 2, 0);
                 break;
             default:
                 break;
