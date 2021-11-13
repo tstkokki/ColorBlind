@@ -84,6 +84,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "MouseToggle",
+                    "type": "Button",
+                    "id": "c65200ff-061e-4363-afe0-026c312e2293",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ControllerToggle",
+                    "type": "Button",
+                    "id": "43f8f963-af19-4449-9b5d-5966cdd3967d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -557,6 +573,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Color4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73e4d118-ef11-4ccc-a41a-257c5abf2257",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c08ba0b-9d9f-47a2-b4f2-327fe3c0482d",
+                    "path": "<SwitchProControllerHID>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ControllerToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73327063-71e4-42b3-934f-f084dbe8eec3",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ControllerToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

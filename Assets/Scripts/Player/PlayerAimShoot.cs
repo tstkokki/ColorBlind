@@ -16,9 +16,49 @@ public class PlayerAimShoot : MonoBehaviour
     [SerializeField] SpriteRenderer renderer;
     [SerializeField] Sounds_SO _sounds;
 
+    //false = mouse, true = controller
+    bool IsMouseOrController = false;
+
+    Mouse _mouse;
+
+    private void Start()
+    {
+        _mouse = Mouse.current;
+    }
+    private void LateUpdate()
+    {
+        //when mouse is active
+        if (!IsMouseOrController)
+        {
+            Vector3 pos = cam.ScreenToWorldPoint(_mouse.position.ReadValue());
+            CalculateAngle(pos.x- transform.position.x, pos.y- transform.position.y);
+        }
+    }
+
+    public void ToggleMouse(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && IsMouseOrController)
+        {
+            IsMouseOrController = false;
+            _mouse = Mouse.current;
+        }
+    }
+    public void ToggleController(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && !IsMouseOrController)
+        {
+            IsMouseOrController = true;
+        }
+    }
+
     public void Aim(InputAction.CallbackContext ctx)
     {
-        float angle = Mathf.Atan2(ctx.ReadValue<Vector2>().y, ctx.ReadValue<Vector2>().x) * Mathf.Rad2Deg;
+        CalculateAngle(ctx.ReadValue<Vector2>().x, ctx.ReadValue<Vector2>().y);
+    }
+
+    private void CalculateAngle(float x, float y)
+    {
+        float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
         aim.z = angle;
         arm.rotation = Quaternion.Euler(aim);
     }
@@ -48,6 +88,5 @@ public class PlayerAimShoot : MonoBehaviour
             paints.SetIndex((int)myColor.colorData.currentSpec);
         }
     }
-
 
 }

@@ -592,6 +592,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: da9735d9-8188-4e6c-b74d-190a49b70a20
     m_ActionName: Platformer/Color4[/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5017588677407091605}
+        m_TargetAssemblyTypeName: PlayerAimShoot, Assembly-CSharp
+        m_MethodName: ToggleMouse
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c65200ff-061e-4363-afe0-026c312e2293
+    m_ActionName: Platformer/MouseToggle[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5017588677407091605}
+        m_TargetAssemblyTypeName: PlayerAimShoot, Assembly-CSharp
+        m_MethodName: ToggleController
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 43f8f963-af19-4449-9b5d-5966cdd3967d
+    m_ActionName: Platformer/ControllerToggle
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Platformer
