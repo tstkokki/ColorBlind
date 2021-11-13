@@ -4833,7 +4833,7 @@ GameObject:
   - component: {fileID: 4050752766606913493}
   m_Layer: 0
   m_Name: Red_Paint
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4933,3 +4933,4 @@ MonoBehaviour:
   paintAmount: 30
   floatSpeed: 2
   floatAmount: 0.1
+  sounds: {fileID: 11400000, guid: db6de172dfaf11949999cc93fd600bf3, type: 2}

@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (!collision.CompareTag("Player"))
+        if (!collision.CompareTag("Player") && !collision.CompareTag("Pickup"))
         {
             // splat dissolve
             var _ground = collision.gameObject.GetComponent<GroundSplatGenerator>();

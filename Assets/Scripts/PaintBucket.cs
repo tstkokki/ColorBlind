@@ -9,6 +9,7 @@ public class PaintBucket : MonoBehaviour
     public float floatSpeed;
     public float floatAmount;
     Vector3 startPos;
+    [SerializeField] Sounds_SO sounds;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class PaintBucket : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             paint.ChangeAmount(paintAmount);
+            sounds.PlayFromList(2);
             Destroy(gameObject);
         }
     }

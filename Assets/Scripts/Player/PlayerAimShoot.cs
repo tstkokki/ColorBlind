@@ -24,6 +24,9 @@ public class PlayerAimShoot : MonoBehaviour
     private void Start()
     {
         _mouse = Mouse.current;
+        myColor.colorData.ChangeColor(3);
+        renderer.color = myColor.colorData.GetColor(myColor.colorData.currentSpec);
+        paints.SetIndex((int)myColor.colorData.currentSpec);
     }
     private void LateUpdate()
     {
@@ -82,11 +85,14 @@ public class PlayerAimShoot : MonoBehaviour
     {
         if (ctx.ReadValue<float>() != 0)
         {
-
-            myColor.colorData.ChangeColor((int)myColor.colorData.currentSpec + ((ctx.ReadValue<float>() > 0) ? 1 : -1));
-            renderer.color = myColor.colorData.GetColor(myColor.colorData.currentSpec);
-            paints.SetIndex((int)myColor.colorData.currentSpec);
+            SetColor((int)ctx.ReadValue<float>());
         }
     }
 
+    private void SetColor(int val)
+    {
+        myColor.colorData.ChangeColor((int)myColor.colorData.currentSpec + ((val > 0) ? 1 : -1));
+        renderer.color = myColor.colorData.GetColor(myColor.colorData.currentSpec);
+        paints.SetIndex((int)myColor.colorData.currentSpec);
+    }
 }
